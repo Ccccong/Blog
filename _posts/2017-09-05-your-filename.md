@@ -1,12 +1,17 @@
 ---
+layout: blog
 published: true
+tags: ''
 ---
+
 ## A New Post
 
 Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
 > We loved with a love that was more than love
 
 hello world![白菜鱼]({{site.baseurl}}/_posts/ibaicaiyu-Logo.png)![ibaicaiyu-Logo.png]({{site.baseurl}}/_posts/ibaicaiyu-Logo.png)
+![三生三世]({{site.baseurl}}/media/sanshengsanshi.jpg)![sanshengsanshi.jpg]({{site.baseurl}}/media/sanshengsanshi.jpg)
+![三生三世]({{site.baseurl}}/media/sanshengsanshi.jpg)
 
             
             
