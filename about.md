@@ -2,20 +2,8 @@
 layout: page
 title: 关于
 ---
-## About
-Emerald is a minimal theme created for Jekyll. The main purpose of Emerald is to provide a clear theme for those who want a blog ready to use, focused on the content and mobile-first.
-
-For further details on Emerald, please visit the [repository on Github](https://github.com/KingFelix/emerald/).
-
-![Emerald](img/Emerald01.png "Emerald")
-
-### Setup
-Emerald may be installed by simply downloading the .zip folder from the [repository on Github](https://github.com/KingFelix/emerald/archive/master.zip).
-
-After extracting the content from the folder into the selected directory, you can type ``jekyll serve`` from the terminal, than open your browser to ``0.0.0.0:4000/emerald/`` and you will find it there.
-
-Additionally it is possible to fork the repository and use Github Pages as hosting. By following this way it will be enough to change the ``baseurl`` value into the ``_config.yml`` file, with the directory name of your project (for example /blog) or simply with a "/" (slash) if you want install Emerald in the root. 
-
-Last but not least: the [Jekyll documentation](http://jekyllrb.com) is the best starting point!
+###about
+我的名字叫CCC，今年大四了，就读于东华理工大学，现在在一家外企实习--->[Teradata](https://baike.baidu.com/item/Teradata/1792590?fr=aladdin),祝博主，早早毕业，早早转正赚大钱。
+邮箱：616174114@qq.com
 
 Enjoy!
