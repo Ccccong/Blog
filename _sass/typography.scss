@@ -15,23 +15,16 @@ p, ul, ol {
 	line-height: 1.5em; /* 24px/16px */
 	margin-bottom: 1.5em; /* 24px/16px */
 }
-
-/* Table Head */
-table thead th {
-background-color: $main-color;
-color: #fff;
-border-bottom-width: 0;
+/* Border styles */
+table thead, table tr {
+border-top-width: 1px;
+border-top-style: solid;
+border-top-color: rgb(235, 242, 224);
 }
-
-/* Column Style */
-table td {
-color: #000;
-}
-/* Heading and Column Style */
-table tr, table th {
-border-width: 1px;
-border-style: solid;
-border-color: $main-color;
+table{
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: rgb(235, 242, 224);
 }
 
 /* Padding and font style */
@@ -39,9 +32,16 @@ table td, table th {
 padding: 5px 10px;
 font-size: 12px;
 font-family: Verdana;
-font-weight: bold;
+color: rgb(149, 170, 109);
 }
 
+/* Alternating background colors */
+table tr:nth-child(even) {
+background: rgb(230, 238, 214)
+}
+table tr:nth-child(odd) {
+background: #FFF
+}
 
 h1 {
 	font-size: 2.25em; /* 36px/16px */
