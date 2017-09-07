@@ -18,7 +18,7 @@ p, ul, ol {
 
 /* Table Head */
 table thead th {
-background-color: $background-color;
+background-color: $main-color;
 color: #fff;
 border-bottom-width: 0;
 }
@@ -31,7 +31,7 @@ color: #000;
 table tr, table th {
 border-width: 1px;
 border-style: solid;
-border-color: $background-color;
+border-color: $main-color;
 }
 
 /* Padding and font style */
