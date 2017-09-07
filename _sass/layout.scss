@@ -226,11 +226,11 @@ code {
   text-align: center;
   margin: 2.666668em;
   span {
-    background-color: darken($main-color, 5%);
+    background-color: lighten($main-color, 5%);
     color: $text-color;
   }
   a:hover {
-    background-color: lighten($main-color, 5%);
+    background-color: darken($main-color, 5%);
   }
 }
 .page-item {
@@ -249,7 +249,7 @@ code {
 
 footer {
   background-color: $main-color;
-  color: $background-color;
+  color: darken($background-color, 5%);;
   text-align: center;
   padding: 0.6667em 0;
 }
