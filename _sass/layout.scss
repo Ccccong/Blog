@@ -226,11 +226,11 @@ code {
   text-align: center;
   margin: 2.666668em;
   span {
-    background-color: darken($background-color, 50%);
+    background-color: darken($main-color, 5%);
     color: $text-color;
   }
   a:hover {
-    background-color: lighten($main-color, 5%);
+    background-color: lighten($background-color, 5%);
   }
 }
 .page-item {
