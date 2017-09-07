@@ -15,8 +15,31 @@ p, ul, ol {
 	line-height: 1.5em; /* 24px/16px */
 	margin-bottom: 1.5em; /* 24px/16px */
 }
-table,table tr th, table tr td {
-	border:1px solid #0094ff; 
+
+/* Table Head */
+table thead th {
+background-color: rgb(156, 186, 95);
+color: #fff;
+border-bottom-width: 0;
+}
+
+/* Column Style */
+table td {
+color: #000;
+}
+/* Heading and Column Style */
+table tr, table th {
+border-width: 1px;
+border-style: solid;
+border-color: rgb(156, 186, 95);
+}
+
+/* Padding and font style */
+table td, table th {
+padding: 5px 10px;
+font-size: 12px;
+font-family: Verdana;
+font-weight: bold;
 }
 
 
