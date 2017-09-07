@@ -230,12 +230,12 @@ code {
     color: $text-color;
   }
   a:hover {
-    background-color: darken($main-color, 5%);
+    background-color: lighten($main-color, 5%);
   }
 }
 .page-item {
-  background-color: $background-color;
-  color: darken($background-color, 5%);
+  background-color:darken($background-color, 5%);
+  color: lighten($main-color, 5%);
   padding: 4px 8px;
   font-weight: 400;
   padding: 0.5em 1em;
