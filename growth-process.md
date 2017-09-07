@@ -1,3 +1,9 @@
+---
+layout: page
+title: 成长之路
+published: true
+---
+
 ## 成长之路
 
 ### 目标：
