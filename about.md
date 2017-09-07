@@ -4,7 +4,7 @@ title: 关于
 published: true
 ---
 
-## about
+## 关于
 
 我的名字叫CCC，今年大四了，就读于东华理工大学，现在在一家外企实习[Teradata](https://baike.baidu.com/item/Teradata/1792590?fr=aladdin),这是我们公司的[官网](https://teradata.com)。祝博主，早早毕业，早早转正赚大钱。
 
