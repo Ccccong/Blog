@@ -1,6 +1,6 @@
 
 ---
-title:Test1
+title:Test2
 layout: blog
 published: true
 tags: ''
