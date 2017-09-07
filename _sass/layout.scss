@@ -235,7 +235,7 @@ code {
 }
 .page-item {
   background-color: $background-color;
-  color: $main-color;
+  color: darken($background-color, 5%);
   padding: 4px 8px;
   font-weight: 400;
   padding: 0.5em 1em;
@@ -249,7 +249,7 @@ code {
 
 footer {
   background-color: $main-color;
-  color: darken($background-color, 5%);;
+  color: $background-color;
   text-align: center;
   padding: 0.6667em 0;
 }
