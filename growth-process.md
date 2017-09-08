@@ -4,6 +4,10 @@ title: 成长之路
 published: true
 ---
 
+
+<h1 style="color:green">博主闭关修炼去了，博客暂停开发。</h1>
+
+
 ## 成长之路
 
 ----------
