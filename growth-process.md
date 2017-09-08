@@ -18,7 +18,11 @@ published: true
 
 
 ##### 目标：
-> 完成Extjs文档。 **待完成2017/9/8 8:27:09 **
+> 完成Extjs文档。 
+**待完成2017/9/8 8:27:09**
+
+----------
+
 
 ##### 目标：
 >梁哥给我介绍了大数据的集成工具[Ambari](https://www.ibm.com/developerworks/cn/opensource/os-cn-bigdata-ambari/)和[QuickStarts](https://www.cloudera.com/downloads/quickstart_vms/5-12.html)，进行了解安装并尝试搭建环境。
