@@ -6,34 +6,39 @@ published: true
 
 ## A New Post
 
-Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
-> We loved with a love that was more than love
+__1.__对于IE或TT浏览器：把需要显示的16x16像素的ICO图标命名为favicon.ICO放置在网站根目录下，浏览器会自动检索
 
-> We loved with a love that was more than love> We loved with a love that was more than love
-
-
-> We loved with a love that was more than love
-
-> We loved with a love that was more than love
-
-> We loved with a love that was more than love
-
-> We loved with a love that was more than love
-
-> We loved with a love that was more than love
-> We loved with a love that was more than love> We loved with a love that was more than love
+__2.__这大概是所有浏览器通用的在标签页加入指定图标的方法：把favicon.ico图标放到网站根目录下，在网页的<head></head>中加入
 
 
-> We loved with a love that was more than love
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /
 
 
-> We loved with a love that was more than love
+ 
+__3.__对于火狐浏览器：图标格式没有IE那么严格，GIF和PNG格式的图标也可以显示，图标名称也可以不是favcion
+
+__4.__把图标放在根目录后，在<head></head>中加入<
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="gif_favicon.gif" type="image/gif" >
 
 
-> We loved with a love that was more than love
+或
 
-            
-            
-                            
+    
 
-标题> We loved with a love that was more than love
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="png_favicon.png" type=" image/png" >
+ 
+
+
+
+__5.__最后，ICO格式的图片可以通过MagicICO这个小软件制作，注意这个软件只能识别PNG格式图片 
+软件下载地址：
+
+[http://ishare.iask.sina.com.cn/f/9614427.html](http://)
+
+__6.__链接在线的图片的时候，可以使用下面的方法（下面是CSDN图标，可以直接放在网页的head标签里面去，这样就能直接显示）
+
+    <link href="http://csdnimg.cn/www/images/favicon.ico" rel="SHORTCUT ICON">
+
