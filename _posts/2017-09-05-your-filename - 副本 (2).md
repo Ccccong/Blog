@@ -1,9 +1,8 @@
-
 ---
 title:Test2
 layout: blog
 published: true
-tags: ''
+tags:
 ---
 
 ## A New Post
