@@ -1,7 +1,7 @@
 # Site settings
 title:  CCC的博客
 description: "以前总是写word文档，现在终于搭建起自己的小博客了，虽然简陋但是能用呃，嘿嘿，不将就！"
-url: "http://www.ibaicaiyu.com/mytestBlog"
+url: "http://www.ibaicaiyu.com/blog"
 
 
 author:
@@ -11,7 +11,8 @@ author:
 
 # Build settings
 baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
-markdown: kramdown
+#markdown: kramdown
+markdown: redcarpet
 source: .
 destination: ./_site
 permalink: /:title
@@ -80,4 +81,9 @@ prose:
           element: "text"
           label: "Permalink"
           value: ""
+#redcarpet:
+redcarpet:
+    extensions: [ "hard_wrap","autolink", "tables", "strikethrough", "superscript", "with_toc_data", "highlight", "prettify","no_intra_emphasis"]
+
+
 
