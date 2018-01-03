@@ -3,6 +3,38 @@
  * https://github.com/mojombo/tpw/blob/master/css/syntax.css
  */
 
+code {
+
+  word-break: break-all;
+
+  white-space: normal;
+
+}
+
+pre { // only apply for code blocks
+
+  overflow: auto;
+
+  padding: 8px;
+
+}
+
+pre code {
+
+  white-space: pre;
+
+  overflow: auto;
+
+  word-wrap: normal;
+
+  span {
+
+    word-break: break-all;
+
+  }
+
+}
+
 
 .highlight  { background-color: #DBDBDB; }
 .lineno { color: darken($background-color, 1%); margin-right: 1em; }
