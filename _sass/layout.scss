@@ -151,6 +151,9 @@
   li {
     list-style-type: none;
   }
+  p{
+	webkit-line-clamp:5;
+  }
 }
 
 #post-page {
