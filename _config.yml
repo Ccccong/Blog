@@ -14,7 +14,7 @@ baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
 markdown: kramdown
 
 kramdown:
-  input:GFM
+ input:GFM
 
 source: .
 destination: ./_site
