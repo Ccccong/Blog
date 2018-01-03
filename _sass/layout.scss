@@ -152,7 +152,12 @@
     list-style-type: none;
   }
   p{
-	-webkit-line-clamp:5;
+	text-overflow: -o-ellipsis-lastline;  
+	overflow: hidden;  
+	text-overflow: ellipsis;  
+	display: -webkit-box;  
+	-webkit-line-clamp: 4;  
+	-webkit-box-orient: vertical;
   }
 }
 
