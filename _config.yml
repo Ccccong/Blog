@@ -11,8 +11,10 @@ author:
 
 # Build settings
 baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
-#markdown: kramdown
-markdown: redcarpet
+markdown: kramdown
+kramdown：
+  input:GFM
+
 source: .
 destination: ./_site
 permalink: /:title
@@ -81,9 +83,6 @@ prose:
           element: "text"
           label: "Permalink"
           value: ""
-#redcarpet:
-redcarpet:
-    extensions: [ "hard_wrap","autolink", "tables", "strikethrough", "superscript", "with_toc_data", "highlight", "prettify","no_intra_emphasis"]
 
 
 
