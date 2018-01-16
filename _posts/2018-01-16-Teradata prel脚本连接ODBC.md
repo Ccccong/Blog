@@ -1,0 +1,38 @@
+---
+title: Teradata prel脚本连接ODBC
+layout: post
+categories: ''
+tags: ''
+---
+如下代码所示：
+    用最简单的例子，明白关键代码，prel脚本如下
+
+        use DBI;
+
+	$userid='dbc';
+	$passwd='dbc';
+	$dsn=192.168.15.141;
+
+	$dbh=DBI->connect("dbi:ODBC:$dsn",$userid,$passwd);  
+
+报错：
+    
+    TD-EXPRESS:~ # perl test.pl 
+    install_driver(ODBC) failed: Can't locate DBD/ODBC.pm in @INC (@INC contains: /usr/lib64 /usr/lib/perl5/5.10.0/x86_64-linux-thread-multi /usr/lib/perl5/5.10.0 /usr/lib/perl    5/site_perl/5.10.0/x86_64-linux-thread-multi /usr/lib/perl5/site_perl/5.10.0 /usr/lib/perl5/vendor_perl/5.10.0/x86_64-linux-thread-multi /usr/lib/perl5/vendor_perl/5.10.0 /    usr/lib/perl5/vendor_perl .) at (eval 3) line 3.
+    Perhaps the DBD::ODBC perl module hasn't been fully installed,
+    or perhaps the capitalisation of 'ODBC' isn't right.
+    Available drivers: DBM, ExampleP, File, Gofer, Proxy, SQLite, Sponge.
+     at test.pl line 7	
+     
+DBI是一个用于Perl编程语言的标准数据库独立接口模块。它定义了一组方法、变量和约定，它们提供了与实际使用的数据库无关的一致的数据库接口。DBI是基于模块架构构建的——对于每个数据库，都有一个驱动程序，它实现了特定数据库的工作细节。DBI允许Perl应用程序使用特定的数据库驱动程序-DBD模块连接到数据库。DBD模块处理与各种数据库交互的复杂细节  
+
+DBD::ODBC是DBI的ODBC驱动程序。它用于连接基于ODBC的数据源。为了验证DBI和DBD::ODBC模块被正确安装和操作，执行以下脚本行:    
+
+
+    perl -MDBI -e "DBI->installed_versions"  
+    
+The response should include DBD::ODBC module and its version similar to the following example:  
+![TIM截图20180116112658](http://p1vuoao0b.bkt.clouddn.com/JekyllWriter/TIM截图20180116112658.png)
+
+##Prerequisites
+下载：[DBD::ODBC](http://search.cpan.org/~mjevans/DBD-ODBC-1.52/ODBC.pm)
