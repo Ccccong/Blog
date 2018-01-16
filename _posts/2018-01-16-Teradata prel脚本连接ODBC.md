@@ -43,4 +43,9 @@ The response should include DBD::ODBC module and its version similar to the foll
 ![TIM截图20180116222849](http://p1vuoao0b.bkt.clouddn.com/JekyllWriter/TIM截图20180116222849.png)  
 看到的反应肯定是百度安装[DBI](http://search.cpan.org/~timb/DBI-1.634/Changes)了，首先下载[DBI](http://search.cpan.org/~timb/DBI-1.634/Changes)  
 
-解压dbi:  ```tar -zxvf DIB压缩包.tar.gz```
+解压dbi:  ```tar -zxvf DIB压缩包.tar.gz```  
+然后进入DBI目录，执行：  
+    perl Makefile.PL  
+    make  
+    make test  
+    make install
