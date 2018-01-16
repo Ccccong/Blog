@@ -36,3 +36,11 @@ The response should include DBD::ODBC module and its version similar to the foll
 
 ##Prerequisites
 下载：[DBD::ODBC](http://search.cpan.org/~mjevans/DBD-ODBC-1.52/ODBC.pm)
+
+由于Teradata ODBC驱动程序是使用DataDirect驱动程序管理器分配的，因此需要使用一个与DataDirect驱动程序管理器构建的数据库来取代DBD::ODBC模块。
+
+在完成安装并配置后，报错：  
+![TIM截图20180116222849](http://p1vuoao0b.bkt.clouddn.com/JekyllWriter/TIM截图20180116222849.png)  
+看到的反应肯定是百度安装[DBI](http://search.cpan.org/~timb/DBI-1.634/Changes)了，首先下载[DBI](http://search.cpan.org/~timb/DBI-1.634/Changes)  
+
+解压dbi:  ```tar -zxvf DIB压缩包.tar.gz```
