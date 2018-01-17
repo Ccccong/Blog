@@ -60,9 +60,11 @@ The response should include DBD::ODBC module and its version similar to the foll
 
     $myodbc = 'intersolve'
     if !$myodbc && -f "$odbchome/include/sqlunx.h";  
+    
 ### Move the updated lines before this line:
 
         ($myodbc, $odbclibdir) = find_iodbc($odbchome) if !$myodbc;  
+        
 ### In addition, replace the following block:
 
     print {$sqlhfh} qq{#include <qeodbc.h>\n};
@@ -71,6 +73,7 @@ The response should include DBD::ODBC module and its version similar to the foll
         $opts{INC} .= " -I$odbcincdir";
         print {$sqlhfh} qq{#include <sql.h>\n#include <sqltypes.h>\n#include <sqlext.h>\n
     }  
+    
 ### With this update:
 
     $opts{DEFINE} = "";
@@ -79,7 +82,7 @@ The response should include DBD::ODBC module and its version similar to the foll
         $opts{INC} .= " -I$odbchome/include";
         print {$sqlhfh} qq{#include <sql.h>\n#include <sqltypes.h>\n#include <sqlext.h>\n#include <sqlucode.h>\n
     }  
-###### Makefile.PL tries very hard to find any valid ODBC driver using the system tools odbc_config, and iodbc_config. We don't want it to try too hard, we want to force it to use DirectData driver manager. Comment out the following lines by prepending with the comment ‘#’ character:
+#### Makefile.PL tries very hard to find any valid ODBC driver using the system tools odbc_config, and iodbc_config. We don't want it to try too hard, we want to force it to use DirectData driver manager. Comment out the following lines by prepending with the comment ‘#’ character:
 
     	# # try and find unixODBC's odbc_config binary
 	# if (!$myodbc) {
