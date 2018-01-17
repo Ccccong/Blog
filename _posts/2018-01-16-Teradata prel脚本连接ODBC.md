@@ -42,10 +42,29 @@ The response should include DBD::ODBC module and its version similar to the foll
 在完成安装并配置后，报错：  
 ![TIM截图20180116222849](http://p1vuoao0b.bkt.clouddn.com/JekyllWriter/TIM截图20180116222849.png)  
 看到的反应肯定是百度安装[DBI](http://search.cpan.org/~timb/DBI-1.634/Changes)了，首先下载[DBI](http://search.cpan.org/~timb/DBI-1.634/Changes)  
-
 解压dbi:  ```tar -zxvf DIB压缩包.tar.gz```  
-然后进入DBI目录，执行：  
-    perl Makefile.PL  
-    make  
-    make test  
-    make install
+然后进入DBI目录，执行：    
+
+        perl Makefile.PL
+        make 
+        make test
+        make install
+        
+再次执行脚本,报错： 
+ 
+        perl: symbol lookup error: /usr/lib/perl5/site_perl/5.10.0/x86_64-linux-thread-multi/auto/DBD/ODBC/ODBC.so: undefined symbol: SQLAllocHandle  
+        
+经过多方搜索终于找到解决办法： 添加*__$opts{LIBS} = "-L$odbclibdir -lodbc;__*在如下代码中
+
+        ...
+    elsif ($myodbc eq 'intersolve') {
+    $opts{DEFINE} = "";
+    #print {$sqlhfh} qq{#include <qeodbc.h>\n};
+    if (-f "$odbchome/include/sql.h") {
+    print "You seem to have the official header files set for DataDirect.\n";
+    $opts{INC} .= " -I$odbchome/include";
+    $opts{LIBS} = "-L$odbclibdir -lodbc;
+    print {$sqlhfh} qq{#include <sql.h>\n#include <sqltypes.h>\n#include <sqlext.h>\n#include <sqlucode.h>\n};
+    }
+。
+。
