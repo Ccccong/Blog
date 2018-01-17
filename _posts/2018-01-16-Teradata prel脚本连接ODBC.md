@@ -59,10 +59,10 @@ The response should include DBD::ODBC module and its version similar to the foll
 ### As follows:
 
     $myodbc = 'intersolve'
-    if !$myodbc && -f "$odbchome/include/sqlunx.h";
+    if !$myodbc && -f "$odbchome/include/sqlunx.h";  
 ### Move the updated lines before this line:
 
-        ($myodbc, $odbclibdir) = find_iodbc($odbchome) if !$myodbc;
+        ($myodbc, $odbclibdir) = find_iodbc($odbchome) if !$myodbc;  
 ### In addition, replace the following block:
 
     print {$sqlhfh} qq{#include <qeodbc.h>\n};
@@ -70,7 +70,7 @@ The response should include DBD::ODBC module and its version similar to the foll
         print "You seem to have the official header files.\n";
         $opts{INC} .= " -I$odbcincdir";
         print {$sqlhfh} qq{#include <sql.h>\n#include <sqltypes.h>\n#include <sqlext.h>\n
-    }
+    }  
 ### With this update:
 
     $opts{DEFINE} = "";
@@ -78,7 +78,7 @@ The response should include DBD::ODBC module and its version similar to the foll
         print "You seem to have the official DataDirect header files.\n";
         $opts{INC} .= " -I$odbchome/include";
         print {$sqlhfh} qq{#include <sql.h>\n#include <sqltypes.h>\n#include <sqlext.h>\n#include <sqlucode.h>\n
-    }
+    }  
 ###### Makefile.PL tries very hard to find any valid ODBC driver using the system tools odbc_config, and iodbc_config. We don't want it to try too hard, we want to force it to use DirectData driver manager. Comment out the following lines by prepending with the comment ‘#’ character:
 
     	# # try and find unixODBC's odbc_config binary
@@ -90,21 +90,21 @@ The response should include DBD::ODBC module and its version similar to the foll
 	#     # try and find iODBC's iodbc_config binary
 	#     ($myodbc, $myodbc_version, $odbchome,
 	#      $odbcincdir, $odbclibdir) = iodbc_config($odbchome);
-	# }
+	# }  
 ### Prepare the environment variables:
 
     export ODBCINI=/opt/teradata/client/ODBC_64/odbc.ini	
     export ODBCHOME=/opt/teradata/client/15.10
     export DBI_DSN=dbi:ODBC:testdsn
     export DBI_USER=dbc
-    export DBI_PASS=dbc
+    export DBI_PASS=dbc  
 ### Finally, build and install:
 
 	/opt/ActivePerl-5.16/bin/perl Makefile.PL
 	make
 	make test          ### optional
-	make instal
-##### 到这里就可以执行test.pl文件了
+	make instal  
+##### 到这里就可以执行test.pl文件了  
 ###### Check that /opt/ActivePerl-5.16/lib/auto/DBD/ has as a newly built ODBC.so library file. If not, manually copy /tmp/DBD-ODBC-1.52/blib/arch/auto/DBD/ODBC/ODBC.so to /opt/ActivePerl-5.16/lib/auto/DBD/.
 
  
