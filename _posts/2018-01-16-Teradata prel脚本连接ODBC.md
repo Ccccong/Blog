@@ -50,20 +50,20 @@ The response should include DBD::ODBC module and its version similar to the foll
     tar -xvf DBD-ODBC-1.52.tar
     cd DBD-ODBC-1.52 
     
-###Update the lines in Makefile.PL:
+### Update the lines in Makefile.PL:
     
 
     $myodbc = 'intersolve'
     if !$myodbc && -f "$odbchome/include/qeodbc.h";
    
-###As follows:
+### As follows:
 
     $myodbc = 'intersolve'
     if !$myodbc && -f "$odbchome/include/sqlunx.h";
-###Move the updated lines before this line:
+### Move the updated lines before this line:
 
         ($myodbc, $odbclibdir) = find_iodbc($odbchome) if !$myodbc;
-###In addition, replace the following block:
+### In addition, replace the following block:
 
     print {$sqlhfh} qq{#include <qeodbc.h>\n};
     if (-f "$odbcincdir/sql.h") {
@@ -71,7 +71,7 @@ The response should include DBD::ODBC module and its version similar to the foll
         $opts{INC} .= " -I$odbcincdir";
         print {$sqlhfh} qq{#include <sql.h>\n#include <sqltypes.h>\n#include <sqlext.h>\n
     }
-###With this update:
+### With this update:
 
     $opts{DEFINE} = "";
     if (-f "$odbchome/include/sql.h") {
@@ -79,7 +79,7 @@ The response should include DBD::ODBC module and its version similar to the foll
         $opts{INC} .= " -I$odbchome/include";
         print {$sqlhfh} qq{#include <sql.h>\n#include <sqltypes.h>\n#include <sqlext.h>\n#include <sqlucode.h>\n
     }
-######Makefile.PL tries very hard to find any valid ODBC driver using the system tools odbc_config, and iodbc_config. We don't want it to try too hard, we want to force it to use DirectData driver manager. Comment out the following lines by prepending with the comment ‘#’ character:
+###### Makefile.PL tries very hard to find any valid ODBC driver using the system tools odbc_config, and iodbc_config. We don't want it to try too hard, we want to force it to use DirectData driver manager. Comment out the following lines by prepending with the comment ‘#’ character:
 
     	# # try and find unixODBC's odbc_config binary
 	# if (!$myodbc) {
@@ -91,26 +91,26 @@ The response should include DBD::ODBC module and its version similar to the foll
 	#     ($myodbc, $myodbc_version, $odbchome,
 	#      $odbcincdir, $odbclibdir) = iodbc_config($odbchome);
 	# }
-###Prepare the environment variables:
+### Prepare the environment variables:
 
     export ODBCINI=/opt/teradata/client/ODBC_64/odbc.ini	
     export ODBCHOME=/opt/teradata/client/15.10
     export DBI_DSN=dbi:ODBC:testdsn
     export DBI_USER=dbc
     export DBI_PASS=dbc
-###Finally, build and install:
+### Finally, build and install:
 
 	/opt/ActivePerl-5.16/bin/perl Makefile.PL
 	make
 	make test          ### optional
 	make instal
-#####到这里就可以执行test.pl文件了
-######Check that /opt/ActivePerl-5.16/lib/auto/DBD/ has as a newly built ODBC.so library file. If not, manually copy /tmp/DBD-ODBC-1.52/blib/arch/auto/DBD/ODBC/ODBC.so to /opt/ActivePerl-5.16/lib/auto/DBD/.
+##### 到这里就可以执行test.pl文件了
+###### Check that /opt/ActivePerl-5.16/lib/auto/DBD/ has as a newly built ODBC.so library file. If not, manually copy /tmp/DBD-ODBC-1.52/blib/arch/auto/DBD/ODBC/ODBC.so to /opt/ActivePerl-5.16/lib/auto/DBD/.
 
  
 
 
-##但是在完成安装并配置后，报错：  
+## 但是在完成安装并配置后，报错：  
 ![TIM截图20180116222849](http://p1vuoao0b.bkt.clouddn.com/JekyllWriter/TIM截图20180116222849.png)  
 看到的反应肯定是百度安装[DBI](http://search.cpan.org/~timb/DBI-1.634/Changes)了，首先下载[DBI](http://search.cpan.org/~timb/DBI-1.634/Changes)  
 解压dbi:  ```tar -zxvf DIB压缩包.tar.gz```  
@@ -121,7 +121,7 @@ The response should include DBD::ODBC module and its version similar to the foll
         make test
         make install
         
-再次执行脚本,报错： 
+##再次执行脚本,报错： 
  
         perl: symbol lookup error: /usr/lib/perl5/site_perl/5.10.0/x86_64-linux-thread-multi/auto/DBD/ODBC/ODBC.so: undefined symbol: SQLAllocHandle  
         
