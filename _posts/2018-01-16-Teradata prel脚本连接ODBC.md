@@ -144,5 +144,3 @@ The response should include DBD::ODBC module and its version similar to the foll
     $opts{LIBS} = "-L$odbclibdir -lodbc;
     print {$sqlhfh} qq{#include <sql.h>\n#include <sqltypes.h>\n#include <sqlext.h>\n#include <sqlucode.h>\n};
     }
-。
-。
