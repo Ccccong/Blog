@@ -1,8 +1,7 @@
 ---
-title: Teradata prel脚本连接ODBC
 layout: post
-categories: ''
-tags: ''
+title: Teradata prel脚本连接ODBC
+published: true
 ---
 如下代码所示：
     用最简单的例子，明白关键代码，prel脚本如下
@@ -129,11 +128,11 @@ The response should include DBD::ODBC module and its version similar to the foll
         make test
         make install
         
-##再次执行脚本,报错： 
+## 再次执行脚本,报错： 
  
         perl: symbol lookup error: /usr/lib/perl5/site_perl/5.10.0/x86_64-linux-thread-multi/auto/DBD/ODBC/ODBC.so: undefined symbol: SQLAllocHandle  
         
-##经过多方搜索终于找到解决办法： 添加*__$opts{LIBS} = "-L$odbclibdir -lodbc;__*在如下代码中
+## 经过多方搜索终于找到解决办法： 添加*__$opts{LIBS} = "-L$odbclibdir -lodbc;__*在如下代码中
 
         ...
     elsif ($myodbc eq 'intersolve') {
