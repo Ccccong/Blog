@@ -15,4 +15,11 @@ github数据收集代码参考[https://github.com/534591395/collection]()
 accesslog的分析，得到用户的行为数据[https://www.jianshu.com/p/5a28e746be4e]() 
 
 # 项目阶段展示
-## 首先看我
+## 首先看我女朋友在学校做的前端界面，随便点击
+![TIM截图20180301093019](http://p1vuoao0b.bkt.clouddn.com/JekyllWriter/TIM截图20180301093019.png)
+##查看后台日志
+
+![TIM截图20180301093507](http://p1vuoao0b.bkt.clouddn.com/JekyllWriter/TIM截图20180301093507.png) 
+##整理后直观的日志
+![TIM截图20180301093633](http://p1vuoao0b.bkt.clouddn.com/JekyllWriter/TIM截图20180301093633.png)
+
