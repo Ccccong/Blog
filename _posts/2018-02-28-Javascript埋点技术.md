@@ -23,3 +23,5 @@ accesslog的分析，得到用户的行为数据[https://www.jianshu.com/p/5a28e
 ![TIM截图20180301093507](http://p1vuoao0b.bkt.clouddn.com/JekyllWriter/TIM截图20180301093507.png) 
 ## 整理后直观的日志
 ![TIM截图20180301093633](http://p1vuoao0b.bkt.clouddn.com/JekyllWriter/TIM截图20180301093633.png)
+
+商城代码（动态的）：https://pan.baidu.com/s/1pMXX7PD 密码：88nu
