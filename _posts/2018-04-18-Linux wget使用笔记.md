@@ -9,11 +9,12 @@ tags: wget
 需要下载某个目录下面的所有文件。
 命令如下
 
-	wget -c -r -np -k -L -p http://docs.openstack.org/liberty/install-guide-rdo/
+>wget -c -r -np -k -L -p http://docs.openstack.org/liberty/install-guide-rdo/
 
 在下载时。有用到外部域名的图片或连接。如果需要同时下载就要用-H参数。
 
-	wget -np -nH -r –span-hosts www.xianren.org/pub/path/
+>wget -np -nH -r –span-hosts www.xianren.org/pub/path/  
+	
 **-c** 断点续传  
 **-r** 递归下载，下载指定网页某一目录下（包括子目录）的所有文件 
 **-nd** 递归下载时不创建一层一层的目录，把所有的文件下载到当前目录 
